@@ -32,7 +32,8 @@
 #ifdef LIBESPEAK_NG_EXPORT
 #define ESPEAK_API __declspec(dllexport)
 #else
-#define ESPEAK_API __declspec(dllimport)
+#define ESPEAK_NG_API //__declspec(dllimport) // will NOT compile for UE4, as we don't compile libespeak as a DLL, but a static library
+#define ESPEAK_API
 #endif
 #else
 #define ESPEAK_API
