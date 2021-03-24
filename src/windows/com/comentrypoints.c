@@ -19,6 +19,7 @@
 #define INITGUID
 
 #include <windows.h>
+#include <Unknwnbase.h>
 
 // {61D23633-CE59-4101-8158-569FC6B51B49}
 DEFINE_GUID(CLSID_TtsEngine, 0x61d23633, 0xce59, 0x4101, 0x81, 0x58, 0x56, 0x9f, 0xc6, 0xb5, 0x1b, 0x49);
