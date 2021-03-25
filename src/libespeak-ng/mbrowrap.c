@@ -25,7 +25,7 @@
 
 #include "mbrowrap.h"
 
-int (WINAPI *init_MBR)(char *voice_path);
+/*int (WINAPI *init_MBR)(char *voice_path);
 void (WINAPI *close_MBR)(void);
 void (WINAPI *reset_MBR)(void);
 int (WINAPI *read_MBR)(short *buffer, int nb_samples);
@@ -34,7 +34,7 @@ int (WINAPI *flush_MBR)(void);
 int (WINAPI *getFreq_MBR)(void);
 void (WINAPI *setVolumeRatio_MBR)(float value);
 char * (WINAPI *lastErrorStr_MBR)(char *buffer, int bufsize);
-void (WINAPI *setNoError_MBR)(int no_error);
+void (WINAPI *setNoError_MBR)(int no_error);*/
 
 #if defined(_WIN32) || defined(_WIN64)
 
@@ -42,7 +42,7 @@ HINSTANCE hinstDllMBR = NULL;
 
 BOOL load_MBR()
 {
-	if (hinstDllMBR != NULL)
+	/*if (hinstDllMBR != NULL)
 		return TRUE;   // already loaded
 
 	if ((hinstDllMBR = LoadLibraryA("mbrola.dll")) == 0)
@@ -56,16 +56,16 @@ BOOL load_MBR()
 	reset_MBR = (void *)GetProcAddress(hinstDllMBR, "reset_MBR");
 	lastErrorStr_MBR = (void *)GetProcAddress(hinstDllMBR, "lastErrorStr_MBR");
 	setNoError_MBR = (void *)GetProcAddress(hinstDllMBR, "setNoError_MBR");
-	setVolumeRatio_MBR = (void *)GetProcAddress(hinstDllMBR, "setVolumeRatio_MBR");
+	setVolumeRatio_MBR = (void *)GetProcAddress(hinstDllMBR, "setVolumeRatio_MBR");*/
 	return TRUE;
 }
 
 void unload_MBR()
 {
-	if (hinstDllMBR) {
+	/*if (hinstDllMBR) {
 		FreeLibrary(hinstDllMBR);
 		hinstDllMBR = NULL;
-	}
+	}*/
 }
 
 #else
